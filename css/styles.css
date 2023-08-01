@@ -11,7 +11,7 @@ body {
   background-image: url(../img/repo-bg.jpg);
   background-position: center;
   background-size: contain;
-  color: #333;
+  color: #fff;
   font-size: 16px;
 }
 
@@ -20,11 +20,19 @@ body {
 }
 
 .view-repos {
-  margin-top: 1.5em;
+  margin-top: 1.5em !important;
   padding: 0.5em 1em;
   cursor: pointer;
   align-self: center;
   width: 300px;
+  color: #fff;
+  background-color: #483978;
+  border: 1px solid #483978;
+}
+
+.view-repos:hover {
+  background-color: #2f2550;
+  border: 1px solid #ccc;
 }
 
 .fa-github-alt {
@@ -247,9 +255,15 @@ section.repo-data {
 
 .button-container {
   width: 100%;
-  background-color: #fff;
   padding-left: 2em;
   padding-bottom: 2em;
+  background: rgb(0, 8, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 8, 36, 1) 0%,
+    rgba(59, 97, 121, 1) 50%,
+    rgba(15, 36, 45, 1) 100%
+  );
 }
 
 .view-repos {
