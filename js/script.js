@@ -60,14 +60,11 @@ const repoInfo = async function (repoName) {
     `https://api.github.com/repos/${username}/${repoName}`
   );
   const repoInfo = await result.json();
-  // console.log(repoInfo);
   const fetchLanguages = await fetch(repoInfo.languages_url);
   const languageData = await fetchLanguages.json();
-  // console.log(languageData);
   const languages = [];
   for (const language in languageData) {
     languages.push(language);
-    // console.log(languages);
   }
   displayRepoInfo(repoInfo, languages);
 };
