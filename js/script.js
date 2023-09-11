@@ -34,7 +34,6 @@ const fetchRepo = async function () {
     `https://api.github.com/users/${username}/repos?sort=updated&per_page=100`
   );
   const repo = await result.json();
-  // console.log(repo);
   fillRepoInfo(repo);
 };
 
