@@ -54,6 +54,7 @@ const repoList = ul.addEventListener("click", function (e) {
   }
 });
 
+// API fetch GET
 const repoInfo = async function (repoName) {
   const result = await fetch(
     `https://api.github.com/repos/${username}/${repoName}`
@@ -83,12 +84,12 @@ const displayRepoInfo = function (repoInfo, languages) {
   repos.classList.add("hide");
   button.classList.remove("hide");
 };
-
+//could update to react onClick?
 button.addEventListener("click", function () {
   repos.classList.remove("hide");
   button.classList.add("hide");
 });
-
+//could update to react onChange?
 filterInput.addEventListener("input", function (e) {
   const inputValue = e.target.value;
   const repos = document.querySelectorAll(".repo");
